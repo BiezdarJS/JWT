@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Jeśli URL zaczyna się od /endpoints/ to nie przekierowuj dalej (uniknięcie pętli)
+RewriteCond %{REQUEST_URI} !^/jwt/api/endpoints/
+
+# Jeśli plik lub katalog istnieje, nie przekierowuj
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^([a-zA-Z0-9_-]+)/?(.*)$ endpoints/$1.php [QSA,L]
