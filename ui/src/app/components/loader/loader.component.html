@@ -1,0 +1,6 @@
+<aside [ngClass]="{'loading': isLoading()}">
+  <i class="spinner"></i>
+  @if(isLoading()) {
+  <span class="state">Authenticating</span>
+  }
+</aside>

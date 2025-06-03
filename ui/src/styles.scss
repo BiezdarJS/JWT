@@ -6,15 +6,19 @@
 *
 */
 
-
 // =============================================================================
 // CSS RESET
 // =============================================================================
-@use 'assets/scss/reset';
-
+@use "assets/scss/reset";
 
 // =============================================================================
 // SETTINGS
 // =============================================================================
-@use 'assets/scss/colors';
+@use "assets/scss/colors";
 
+body {
+  font-family: "Open Sans", sans-serif;
+  height: 100vh;
+  background: url("https://i.imgur.com/HgflTDf.jpg") 50% fixed;
+  background-size: cover;
+}
